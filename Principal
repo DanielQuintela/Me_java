@@ -1,0 +1,80 @@
+package TrabalhoUnit;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Scanner;
+
+public class Principal {
+    public static void main(String[] args) throws ParseException {
+        String opcao = "";
+        while (!opcao.equals("N")) {
+            Scanner entrada = new Scanner(System.in);
+            System.out.println("1. Cadastro de Dentistas \n"
+                    + "2. Cadastro de Pacientes \n"
+                    + "3. Cadastro de Consultas \n" +
+                    "4. Cancelamento de Consultas \n"
+                    + "5. Relatório de Consultas Agendadas \n" +
+                    "6. Relatório Financeiro");
+            opcao = entrada.next();
+            if (opcao.equals("1")) {
+                cadastrarDentista();
+            } else {
+                if (opcao.equals("2")) {
+                    ;
+                } else {
+                    if (opcao.equals("3")) {
+                        ;
+                    } else {
+                        if (opcao.equals("4")) {
+                            ;
+                        } else {
+                            if (opcao.equals("5")) {
+                                ;
+                            } else {
+                                if (opcao.equals("6")) {
+                                    ;
+                                } else {
+                                    if (opcao.equals("N")) {
+                                        break;
+                                    } else {
+                                        System.out.println("Opção inválida!");
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                System.out.println("Deseja continuar? [S/N]");
+                opcao = entrada.next();
+            }
+
+        }
+
+    }
+    /*
+    private String cro;
+    private String nome;
+    private Date dtnascimento;
+    private Date dtcadastro;
+*/
+    public static void cadastrarDentista() throws ParseException {
+        Scanner entrada = new Scanner(System.in);
+        SimpleDateFormat formato = new SimpleDateFormat("dd/MM/yyyy");
+
+        Dentista dDentista= new Dentista();
+        System.out.println("CRO : ");
+        dDentista.setCro(entrada.next());
+        System.out.println("Qual seu nome ?: ");
+        dDentista.setNome(entrada.next());
+        System.out.println("Qual a data do seu aniversário ?: ");
+        dDentista.setDtnascimento(formato.parse(entrada.next()));
+        System.out.println("Qual a data do cadastro ?: ");
+        dDentista.setDtcadastro(formato.parse(entrada.next()));
+
+
+    }
+
+
+
+}
