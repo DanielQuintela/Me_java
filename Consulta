@@ -1,5 +1,6 @@
 package TrabalhoUnit;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Consulta extends Dentista{
@@ -7,7 +8,7 @@ public class Consulta extends Dentista{
     private String horaconsulta;
     private String flagprimeiracons;
     private String statuscons;
-    private Double valorcons;
+    private ArrayList<Double> valorcons;
 
     public Date getDtconsulta() {
         return dtconsulta;
@@ -41,11 +42,11 @@ public class Consulta extends Dentista{
         this.statuscons = statuscons;
     }
 
-    public Double getValorcons() {
+    public ArrayList<Double> getValorcons() {
         return valorcons;
     }
 
-    public void setValorcons(Double valorcons) {
+    public void setValorcons(ArrayList<Double> valorcons) {
         this.valorcons = valorcons;
     }
 }
