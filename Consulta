@@ -1,5 +1,39 @@
 package TrabalhoUnit;
 
+import java.text.ParseException;
+import java.util.Scanner;
+
 public class Consulta {
+    public static void main(String[] args) throws ParseException {
+        String opcao = "";
+        while (!opcao.equals("N")) {
+            Scanner entrada = new Scanner(System.in);
+            System.out.println("1. Cadastro de Dentistas \n"
+                    + "2. Cadastro de Pacientes \n"
+                       + "3. Cadastro de Consultas \n" +
+                            "4. Cancelamento de Consultas \n" 
+                         + "5. Relatório de Consultas Agendadas \n" +
+                        "6. Relatório Financeiro");
+                        opcao = entrada.next();
+                        if (opcao.equals("1")) {
+                            cadastraPessoaFisica();
+                        } else {
+                            if (opcao.equals("2")) {
+                                cadastraPessoaJuridica();
+                            } else {
+                                if (opcao.equals("N")) {
+                                    break;
+                                } else {
+                                    System.out.println("Opção inválida!");
+                                }
+                            }
+                        }
+                        System.out.println("Deseja continuar? [S/N]");
+                        opcao = entrada.next();
+                    }
+
+
+    }
+
 
 }
