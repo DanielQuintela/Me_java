@@ -2,10 +2,13 @@ package TrabalhoUnit;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Principal {
+    static ArrayList<Dentista> listaDentista = new ArrayList<Dentista>();
+
     public static void main(String[] args) throws ParseException {
         String opcao = "";
         while (!opcao.equals("N")) {
@@ -71,7 +74,8 @@ public class Principal {
         dDentista.setDtnascimento(formato.parse(entrada.next()));
         System.out.println("Qual a data do cadastro ?: ");
         dDentista.setDtcadastro(formato.parse(entrada.next()));
-
+        listaDentista.add(dDentista);
+        
 
     }
 
