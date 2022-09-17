@@ -1,0 +1,45 @@
+package TrabalhoUnit;
+
+import java.util.Date;
+
+public class Dentista {
+    private String cro;
+    private String nome;
+    private Date dtnascimento;
+    private Date dtcadastro;
+
+    public String getCro() {
+        return cro;
+    }
+
+    public void setCro(String cro) {
+        this.cro = cro;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public Date getDtnascimento() {
+        return dtnascimento;
+    }
+
+    public void setDtnascimento(Date dtnascimento) {
+        this.dtnascimento = dtnascimento;
+    }
+
+    public Date getDtcadastro() {
+        return dtcadastro;
+    }
+
+    public void setDtcadastro(Date dtcadastro) {
+        this.dtcadastro = dtcadastro;
+    }
+
+
+
+}
