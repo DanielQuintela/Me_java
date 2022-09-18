@@ -4,11 +4,21 @@ import java.util.ArrayList;
 import java.util.Date;
 
 public class Consulta extends Dentista{
+
+    private String nomecliente;
     private Date dtconsulta;
     private String horaconsulta;
     private String flagprimeiracons;
     private String statuscons;
     private ArrayList<Double> valorcons;
+
+    public String getNomecliente() {
+        return nomecliente;
+    }
+
+    public void setNomeliente(String nomec) {
+        this.nomecliente = nomec;
+    }
 
     public Date getDtconsulta() {
         return dtconsulta;
